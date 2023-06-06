@@ -157,6 +157,7 @@ class MainPage(QWidget):
         self.account_service = AccountService()
         self.user_service = UserService()
         self.user = user
+        self.current_account = account
 
         self.accountDescription.setText("")
         self.transactionDetails.setText("")
@@ -170,6 +171,8 @@ class MainPage(QWidget):
         self.manageCatButton.clicked.connect(lambda: goto_manage_categories_page(self.user, self, self.current_account))
         self.addTransactionButton.clicked.connect(lambda: goto_add_transaction_page(self.user, self.current_account,
                                                                                     self))
+        self.generatePlotsButton.clicked.connect(lambda: self.account_service.generate_average_transactions_plot(self.current_account))
+
         self.importToCsvButton.clicked.connect(self.import_to_csv)
 
         self.changeTransactionButton.clicked.connect(self.update_transaction)
@@ -179,7 +182,7 @@ class MainPage(QWidget):
 
         self.comboBoxAccounts.currentIndexChanged.connect(self.account_changed)
 
-        self.current_account = account
+
         user_accounts = self.account_service.get_user_accounts(self.user)
         self.loading_user_accounts(user_accounts)
 

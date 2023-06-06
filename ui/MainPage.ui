@@ -792,7 +792,7 @@ QPushButton:pressed{
 }</string>
    </property>
    <property name="text">
-    <string>Import to csv</string>
+    <string>Export to csv</string>
    </property>
   </widget>
  </widget>

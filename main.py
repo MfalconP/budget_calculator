@@ -10,7 +10,6 @@ from logic.services import *
 from loguru import logger
 
 
-# goto pages methods
 def goto_sign_up(current_window):
     createAccWindow = SignUpPage()
     widget.addWidget(createAccWindow)
@@ -100,7 +99,6 @@ class ApplicationService:
             elem.setText("")
 
 
-# Login window class
 class LoginPage(QWidget):
     def __init__(self):
         super(LoginPage, self).__init__()
@@ -125,7 +123,6 @@ class LoginPage(QWidget):
             goto_main_page(success, self)
 
 
-# Sign up window class
 class SignUpPage(QWidget):
     def __init__(self):
         super(SignUpPage, self).__init__()

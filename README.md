@@ -1,6 +1,6 @@
 # Budget Calculator
 
-The Budget Calculator is a Python program that helps you manage your personal finances and track your expenses. It allows you to set budget limits for different categories and keep track of your spending.- 
+The Budget Calculator is a Python program that helps you manage your personal finances and track your expenses. It allows you to set budget limits for different categories and keep track of your spending.
 
 ## Usage:
 - Set the database, add ip to env variables.
@@ -16,3 +16,4 @@ The Budget Calculator is a Python program that helps you manage your personal fi
 - PyODBC
 - CSS
 - MySQL
+- PyQt
